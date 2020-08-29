@@ -1,0 +1,78 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /*Reset para REMS - 62.5% = 10px de 16px*/
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    background-image: url(../img/fondoform.png);
+    background-position: center center;
+    background-size: contain;
+}
+.contenedor {
+    width: 100%;
+    padding: 1.5rem;
+}
+.formulario {
+    color: white;
+    background-color: darkslategrey ;
+    margin-top: 15rem;
+    padding: 0.3rem;
+}
+h1 {
+    text-align: center;
+    color: #1a2537;
+    font-size: 4rem;
+}
+input[type="text"],input[type="password"],input[type="email"]{
+    font-size: 2rem;
+    width: 82%;
+    padding: 1rem;
+    border: none;
+}
+.input-contenedor {
+    margin-bottom: 1.5rem;
+    border: 0.1rem solid #aaa;
+}
+.icon{
+    min-width: 5rem;
+    text-align: center;
+    color: #999;
+}
+.button {
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 2rem;
+    background: #1a2537;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.button:hover {
+    background: cadetblue;
+}
+p{
+    text-align: center;
+}
+.link {
+    text-decoration: none;
+    color: #1a2537;
+    font-weight: 600;
+}
+.link:hover {
+    color: cadetblue;
+}
+@media(min-width:768px)
+{
+    .formulario{
+        margin: auto;
+        width: 50rem;
+        margin-top:150px;
+        border-radius: 2%;
+    }
+}
