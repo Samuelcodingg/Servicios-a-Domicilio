@@ -31,8 +31,8 @@
 
             <input type="submit" value="Regístrate" class="button" name="register">
             <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
-            <p>¿Ya tienes cuenta?<a href="login.php" class="link">Iniciar Sesión</a></p>
-            <p><a href="index.php" class="link">Regresar a Inicio</a></p>
+            <p>¿Ya tienes cuenta?<a href="index.php" class="link">Iniciar Sesión</a></p>
+            <p><a href="principal.php" class="link">Regresar a Inicio</a></p>
         </div>
     </form>
 

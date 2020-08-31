@@ -26,7 +26,7 @@
             <input type="submit" value="Login" class="button">
             <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
             <p>¿No tienes cuenta?<a href="registrarse.php" class="link">Regístrate</a></p>
-            <p><a href="index.php" class="link">Regresar a Inicio</a></p>
+            <p><a href="principal.php" class="link">Regresar a Inicio</a></p>
         </div>
     </form>
 </body>
