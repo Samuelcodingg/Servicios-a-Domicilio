@@ -1,6 +1,8 @@
 <?php 
     require 'con_db.php';
     session_start();
+    session_destroy();
+    session_start();
 
     if(isset($_POST['login'])){
         $usuario = $_POST['email'];
@@ -11,28 +13,15 @@
         $array = mysqli_fetch_array($resultado);
 
         if($array['contar']>0){
-            $_SESSION['username']=$usuario;
-            header("location:principal.php");
+            $consulta_nombre = "SELECT nombre FROM datos WHERE email='$usuario' and password='$pass'";
+            $result = mysqli_query($conex,$consulta_nombre);
+            $nombre = mysqli_fetch_array($result);
+            echo '<h1 class="bueno">Bienvenido!</h1>';
+            $_SESSION['username']=$nombre['nombre'];
+            header("refresh:5;url=principal.php");
         }
         else{
-            echo '
-            <style>
-                .malo {
-                    width: 100%!important;
-                    padding: 1.2rem!important;
-                    color: #fff!important;
-                    animation-name: mianimacion;
-                    animation-duration: 4s!important;
-                    animation-timing-function: linear;
-                }
-
-                @keyframes mianimacion {
-                    0% {background:#c21d17}
-                    50% {background:#a31915}
-                    100% {background:#6914of}
-                }
-            </style>
-            <h1 class="malo">Datos Incorrectos...!</h1>';
+            echo '<h1 class="malo">Datos Incorrectos...!</h1>';
         }
     }
 ?>

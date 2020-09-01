@@ -9,24 +9,23 @@
     <link rel="stylesheet" href="styles/estilos.css">
 </head>
 <body>
-    <?php 
-        session_start();
-        
-        if(!empty($_SESSION['username'])){
-            echo '<h1>BIENVENIDO '.$_SESSION['username'].'</h1>';
-        }
-        else{
-            header("location:index.php");
-        }
-        session_destroy();
-    ?>
     <!-- Adentro ira barra de navegacion e imagen de fondo -->
     <header class="site-header barra">
         <a href="principal.php"><h1>Servicios Domésticos</h1></a>
 
         <nav class="opcionesBarra">
-            <a href="registrarse.php"><h3>Registrarse</h3></a>
-            <a href="index.php"><h3>Login</h3></a>
+            <?php 
+                session_start();
+                if(!empty($_SESSION['username'])){
+                    $nombre = $_SESSION['username'];
+                    echo '<h3 class="usuario">'.$nombre.'</h3>';
+                    echo '<a href="index.php"><h3>Salir<h3></a>';
+                }
+                else{
+                    echo '<a href="registrarse.php"><h3>Registrarse</h3></a>';
+                    echo '<a href="index.php"><h3>Login</h3></a>';
+                }
+            ?>
         </nav>
     </header>
     <!--Breve descripcion-->
@@ -74,12 +73,19 @@
     <!--Barra navegacion footer-->
     <footer class="site-header barra">
         <nav class="opcionesBarra">
-            <a href="registrarse.php"><h3>Registrarse</h3></a>
-            <a href="index.php"><h3>Login</h3></a>
+            <?php 
+                if(!empty($_SESSION['username'])){
+                    echo '<h3 class="usuario">'.$nombre.'</h3>';
+                    echo '<a href="index.php"><h3>Salir<h3></a>';
+                }
+                else{
+                    echo '<a href="registrarse.php"><h3>Registrarse</h3></a>';
+                    echo '<a href="index.php"><h3>Login</h3></a>';
+                }
+            ?>
         </nav>
 
         <a href="principal.php"><h1>Servicios Domésticos</h1></a>
-        <p>hola</p>
     </footer>
 </body>
 </html>
