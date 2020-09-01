@@ -78,28 +78,57 @@ p{
     .malo {
         width: 100%!important;
         padding: 1.2rem!important;
-        background-color: #a22!important;
+        /* background: #a22!important; */
         color: #fff!important;
-        animation-name: error!important;
+        animation-name: mianimacion!important;
         animation-duration: 4s!important;
+        animation-timing-function: linear;
     }
 
-    @keyframes error {
+    @keyframes mianimacion {
         0% {background-color:#a22}
         50% {background-color:green}
         100% {background-color:blue}
+    }
+    .bueno {
+        width: 100%!important;
+        padding: 1.2rem!important;
+        color: #fff!important;
+        animation-name: succes;
+        animation-duration: 4s!important;
+        animation-timing-function: linear;
+    }
+    @keyframes succes {
+        0% {background:white}
+        25% {background:#8edcb9}
+        50% {background:#69d0a3}
+        75% {background:#53ca98}
     }
 }
 .malo {
     width: 100%!important;
     padding: 1.2rem!important;
-    background-color: #a22!important;
     color: #fff!important;
-    animation-name: error!important;
+    animation-name: mianimacion!important;
     animation-duration: 4s!important;
+    animation-timing-function: linear;
 }
-@keyframes error {
-    0% {background-color:#a22}
-    50% {background-color:green}
-    100% {background-color:blue}
+@keyframes mianimacion {
+    0% {background:white}
+    25% {background:#c21d17}
+    50% {background:#a31915}
+}
+.bueno {
+    width: 100%!important;
+    padding: 1.2rem!important;
+    color: #fff!important;
+    animation-name: succes;
+    animation-duration: 4s!important;
+    animation-timing-function: linear;
+}
+@keyframes succes {
+    0% {background:white}
+    25% {background:#8edcb9}
+    50% {background:#69d0a3}
+    75% {background:#53ca98}
 }
