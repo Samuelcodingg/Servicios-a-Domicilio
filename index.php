@@ -9,11 +9,6 @@
     <link rel="stylesheet" href="styles/estilos2.css">
 </head>
 <body>
-    <?php
-        if(!empty($_SESSION['username'])){
-            session_destroy();
-        }
-    ?>
     <form class="formulario" method="POST">
         <h1>Login</h1>
         <div class="contenedor">
