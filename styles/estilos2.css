@@ -75,4 +75,31 @@ p{
         margin-top:150px;
         border-radius: 2%;
     }
+    .malo {
+        width: 100%!important;
+        padding: 1.2rem!important;
+        background-color: #a22!important;
+        color: #fff!important;
+        animation-name: error!important;
+        animation-duration: 4s!important;
+    }
+
+    @keyframes error {
+        0% {background-color:#a22}
+        50% {background-color:green}
+        100% {background-color:blue}
+    }
+}
+.malo {
+    width: 100%!important;
+    padding: 1.2rem!important;
+    background-color: #a22!important;
+    color: #fff!important;
+    animation-name: error!important;
+    animation-duration: 4s!important;
+}
+@keyframes error {
+    0% {background-color:#a22}
+    50% {background-color:green}
+    100% {background-color:blue}
 }

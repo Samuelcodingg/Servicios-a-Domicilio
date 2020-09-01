@@ -9,6 +9,17 @@
     <link rel="stylesheet" href="styles/estilos.css">
 </head>
 <body>
+    <?php 
+        session_start();
+        
+        if(!empty($_SESSION['username'])){
+            echo '<h1>BIENVENIDO '.$_SESSION['username'].'</h1>';
+        }
+        else{
+            header("location:index.php");
+        }
+        session_destroy();
+    ?>
     <!-- Adentro ira barra de navegacion e imagen de fondo -->
     <header class="site-header barra">
         <a href="principal.php"><h1>Servicios Domésticos</h1></a>

@@ -6,8 +6,8 @@
             $name = $_POST['name'];
             $email = $_POST['mail'];
             $password = $_POST['password'];
-            $consulta = "INSERT INTO datos(nombre,email,password) VALUES ('$name','$email','$password');";
-            mysqli_query($conex,$consulta);
+            $consulta_registrar = "INSERT INTO datos(nombre,email,password) VALUES ('$name','$email','$password');";
+            $resultado = mysqli_query($conex,$consulta_registrar);
             if($resultado){
                 echo '<h3>Te has inscrito correctamente!</h3>';
             }
