@@ -22,8 +22,7 @@
                     echo '<a href="index.php"><h3>Salir<h3></a>';
                 }
                 else{
-                    echo '<a href="registrarse.php"><h3>Registrarse</h3></a>';
-                    echo '<a href="index.php"><h3>Login</h3></a>';
+                    header("location:index.php");
                 }
             ?>
         </nav>
