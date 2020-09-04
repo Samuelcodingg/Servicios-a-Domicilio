@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Login</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/estilos2.css">
 </head>
 <body>
-
+    <?php
+        if(!empty($_SESSION['username'])){
+            session_destroy();
+        }
+    ?>
     <form class="formulario" method="POST">
         <h1>Login</h1>
         <div class="contenedor">
 
             <div class="input-contenedor icon">
                 <i class="fas fa-envelope"></i>
-
                 <input type="email" placeholder="Correo Electrónico" name="email">
             </div>
 
