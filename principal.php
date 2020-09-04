@@ -18,12 +18,13 @@
                 session_start();
                 if(!empty($_SESSION['username'])){
                     $nombre = $_SESSION['username'];
+                    echo '<h3 id="counting"></h3>';
+                    echo '<a href="#"><i class="fas fa-shopping-cart iconito"></i></a>';
                     echo '<h3 class="usuario">'.$nombre.'</h3>';
                     echo '<a href="index.php"><h3>Salir<h3></a>';
                 }
                 else{
-                    echo '<a href="registrarse.php"><h3>Registrarse</h3></a>';
-                    echo '<a href="index.php"><h3>Login</h3></a>';
+                    header("location:index.php");
                 }
             ?>
         </nav>
@@ -32,6 +33,7 @@
     <section class="seccion1">
         <img src="img/imagen-seccion.jpg" alt="imagen-seccion">
         <p class="contenidoSeccion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque dignissimos nesciunt vel beatae nisi molestiae, a provident illum dicta. Molestias dolor ab iste exercitationem, voluptatibus perferendis dolorum cum officiis recusandae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, tempore quidem expedita debitis fugit fugiat minus atque consequuntur, cupiditate voluptates accusamus, consequatur facilis dignissimos sunt quas? Velit, amet. Quis, assumenda. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum rerum magni nihil odit veniam. Iusto ipsum, cumque molestias molestiae a deleniti porro neque, eos quaerat cum, reprehenderit optio atque? At.</p>
+        <?php include 'contador_visitas.php' ?>
     </section>
 
     <!--Anuncios-->
@@ -45,17 +47,17 @@
                     <h2>Gasfitería</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, voluptas molestiae</p>
                     <p>S/0.000</p>
-                    <a href="#" class="boton boton-amarillo d-block">Ver Servicio</a>
+                    <button href="#" class="boton boton-amarillo d-block" onclick="countingClicks()">Añadir Servicio</button>
                 </div>
             </div>
 
             <div class="anuncio">
                 <img src="img/electricidad.png" alt="electricista">
                 <div class="contenido-anuncio">
-                    <h2>Elictricidad</h2>
+                    <h2>Electricidad</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, voluptas molestiae</p>
                     <p>S/0.000</p>
-                    <a href="#" class="boton boton-amarillo d-block">Ver Servicio</a>
+                    <button href="#" class="boton boton-amarillo d-block" onclick="countingClicks()">Añadir Servicio</button>
                 </div>
             </div>
 
@@ -65,13 +67,13 @@
                     <h2>Carpintería</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, voluptas molestiae</p>
                     <p>S/0.000</p>
-                    <a href="#" class="boton boton-amarillo d-block">Ver Servicio</a>
+                    <button href="#" class="boton boton-amarillo d-block" onclick="countingClicks()">Añadir Servicio</button>
                 </div>
             </div>
         </div>
     </section>
     <!--Barra navegacion footer-->
-    <footer class="site-header barra">
+    <footer class="site-header barra foot">
         <nav class="opcionesBarra">
             <?php 
                 if(!empty($_SESSION['username'])){
@@ -87,5 +89,6 @@
 
         <a href="principal.php"><h1>Servicios Domésticos</h1></a>
     </footer>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
